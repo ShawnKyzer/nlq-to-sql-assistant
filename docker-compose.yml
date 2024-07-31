@@ -1,7 +1,7 @@
 services:
 
   langflow:
-    image: langflowai/langflow:latest
+    image: langflowai/langflow:1.0.14
     ports:
       - "7860:7860"
     volumes:
@@ -14,11 +14,18 @@ services:
       - postgres
 
   ollama:
-    image: ollama/ollama
+    image: ollama/ollama:0.3.1
     ports:
       - "11435:11434"
     volumes:
       - ./app_data/ollama:/root/.ollama
+    entrypoint: ["/bin/bash", "-c"]
+    command:
+      - |
+        ollama serve &
+        sleep 10
+        ollama pull llama3:7b
+        wait
 
   postgres:
     image: postgres:16
