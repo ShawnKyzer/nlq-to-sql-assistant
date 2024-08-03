@@ -15,7 +15,7 @@ This project leverages the following technologies:
 
 **Prerequisites:**
 
-* Docker Desktop installed and running on your system.
+* Docker Desktop installed and running on your system. Installion instructions can be found [here](https://docs.docker.com/get-docker/)
 
 **Steps:**
 
