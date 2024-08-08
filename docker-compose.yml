@@ -14,11 +14,11 @@ services:
       - postgres
 
   ollama:
-    image: ollama/ollama:0.3.1
+    image: ollama/ollama:0.3.4
     ports:
       - "11435:11434"
     volumes:
-      - ./app_data/ollama:/root/.ollama
+      - ollama:/root/.ollama
     entrypoint: ["/bin/bash", "-c"]
     command:
       - |
@@ -37,7 +37,8 @@ services:
     ports:
       - "5432:5432"
     volumes:
-      - ./app_data/postgres:/var/lib/postgresql/data/
+      - postgres:/var/lib/postgresql/data/
 
 volumes:
   ollama:
+  postgres:
