@@ -1,6 +1,6 @@
 # NLQ-to-SQL Assistant
 
-This repository demonstrates a practical application of Domain-Driven Design (DDD) principles to build an AI-powered SQL query assistant. This assistant allows users to query a database using natural language.
+This repository demonstrates a practical application of Domain-Driven Design (DDD) principles to build an AI-powered SQL query assistant. This assistant allows users to query a database using natural language. Please read original blog post [here](https://opendatascience.com/domain-driven-design-in-practice-crafting-an-ai-assistant-step-by-step/) for more information. 
 
 ## Overview
 
